@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>jQuery Mobile</title>
+  @Styles.Render("~/Content/jquerymobile")
+  @Scripts.Render("~/bundles/jquery")
+  @Scripts.Render("~/bundles/jquerymobile")
+</head>
+<body>
+  <div data-role="page" data-title="jQuery Mobile">
+    <div data-role="header">
+      <h1>jQuery Mobile</h1>
+    </div>
+    <div role="main" class="ui-content">
+      @RenderBody()
+    </div>
+    <div data-role="footer">
+      Copyright 1998-2014, YAMADA.Yoshihiro
+    </div>
+  </div>
+</body>
+</html>

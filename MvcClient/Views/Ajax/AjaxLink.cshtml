@@ -1,0 +1,26 @@
+﻿@model IEnumerable<SelectListItem>
+
+@{
+    ViewBag.Title = "AjaxLink";
+}
+
+<h2>AjaxLink</h2>
+
+<div class="btn-group">
+  @foreach (var item in Model)
+{
+  <button type="button" class="btn btn-info btn-search"
+    data-category="@item.Value">@item.Text</button>
+}
+</div>
+<div id="result"></div>
+
+@section scripts {
+  <script>
+    $(function(){
+      $('.btn-search').click(function (e) {
+        $('#result').load('/Ajax/AjaxSearch/' + $(this).data('category'));
+      });
+    });
+  </script>
+}

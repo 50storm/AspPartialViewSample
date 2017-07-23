@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Jquery";
+}
+
+<h2>Jquery</h2>
+
+<div id="books">
+  <p><img src="http://www.wings.msn.to/books/978-4-7741-6566-0/978-4-7741-6566-0_logo.jpg" class="other" /></p>
+  <p><img src="http://www.wings.msn.to/books/978-4-8222-9836-4/978-4-8222-9836-4_logo.jpg" /></p>
+  <p><img src="http://www.wings.msn.to/books/978-4-7741-6410-6/978-4-7741-6410-6_logo.jpg" class="other" /></p>
+  <p><img src="http://www.wings.msn.to/books/978-4-7741-6296-6/978-4-7741-6296-6_logo.jpg" /></p>
+  <p><img src="http://www.wings.msn.to/books/978-4-7741-6127-3/978-4-7741-6127-3_logo.jpg" class="other" /></p>
+</div>
+
+@section scripts{
+  <script>
+  $(function() {
+    //$('#books img.other')
+    //  .fadeOut(3000)
+    //  .fadeIn(3000);
+
+    $('img')
+      .click(function(e) {
+        $(this).fadeOut(3000);
+      });
+  });
+  </script> 
+}

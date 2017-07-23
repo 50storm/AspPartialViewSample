@@ -1,0 +1,32 @@
+﻿
+@{
+  ViewBag.Title = "GourmetSearch";
+}
+
+<h2>GourmetSearch</h2>
+
+<form>
+  <label for="keyword">キーワード：</label>
+  <input id="keyword" name="keyword" type="text" size="15" />
+  <input id="search" type="button" value="検索" />
+</form>
+<img id="progress" src="~/Content/ajax-loader.gif" style="display:none;" />
+<div id="result"></div>
+
+@section scripts {
+<script>
+$(function () {
+  $(document)
+    .ajaxStart(function () {
+      $('#progress').show();
+    })
+    .ajaxComplete(function () {
+      $('#progress').hide();
+    });
+  $('#search').click(function () {
+    $('#result').load('/Ajax/GourmetResult',
+      { keyword: $('#keyword').val() });
+  });
+});
+</script>
+}

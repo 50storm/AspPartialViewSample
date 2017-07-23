@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "Jqueryui";
+}
+
+<h2>Jqueryui</h2>
+  <div id="tab">
+  <ul>
+    <li><a href="#jq">jQuery</a></li>
+    <li><a href="#jqui">jQuery UI</a></li>
+    <li><a href="#jqmobile">jQuery Mobile</a></li>
+  </ul>
+  <div id="jq">
+    <p>
+      jQueryは、John Resig（ジョン・レシグ）氏によって開発された軽量なJavaScriptライブラリ。
+      JavaScriptライブラリとしては比較的後発のものでしたが、以下のような特徴から多くの開発者の支持を集め、急速に普及しました。</p>
+    <ul>
+        <li>モットーは「Write Less, Do More（より少ないコードで、より多くのことを）」</li>
+        <li>文書ツリーの操作から組み込みオブジェクトの拡張、エフェクト、AJAX対応まで、クライアントサイドスクリプトに関わる機能を総合的にサポート</li>
+        <li>主要なブラウザーに対応</li>
+        <li>にも拘らず、サイズは30キロバイト強ととても軽量</li>
+        <li>高機能なウィジェットを提供するjQuery UIをはじめ、多くのプラグインも提供</li>
+      </ul>
+  </div>
+  <div id="jqui">
+    <p>
+      jQuery UIは、アコーディオンパネルやオートコンプリート機能、日付入力ボックスなど、よく利用するユーザーインターフェイス部品（ウィジェット）を取り揃えたライブラリ集です。<br />
+      jQuery UIでは、以下のような特徴があります。
+    </p>
+      <ul>
+        <li>jQueryの開発メンバーが開発に参加していることから品質も高い</li>
+        <li>標準のテーマが24種類用意されている</li>
+        <li>ThemeRollerを利用することでデザインの変更も簡単</li>
+      </ul>
+    <p>jQuery前提でリッチなUIを実装したいならば、まずはjQuery UIの利用をお勧めします。</p>
+  </div>
+  <div id="jqmobile">
+    <p>
+      jQuery UIのモバイル対応版に相当するのがjQuery Mobileです。
+      あらかじめ決められたマークアップを準備することで、ネイティブアプリ・ライクなモバイルアプリケーションを実装できます。
+      jQueryのプラグインなので当然ですが、jQueryの知識をそのままモバイル開発にも援用できるのが特長です。
+    </p>
+  </div>
+</div>
+
+
+@section scripts {
+<script>
+  $(function () {
+    $('#tab').tabs({
+      active: 1,
+      collapsible: true,
+      heightStyle: 'auto'
+    });
+  });
+</script>
+}
